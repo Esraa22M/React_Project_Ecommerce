@@ -1,0 +1,247 @@
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+  /* colors */
+  --clr-primary: hsla(136, 53%, 59%, 1);
+  --clr-black:hsla(216, 8%, 12%, 1);
+  --clr-light: hsla(210, 5%, 67%, 0.19);
+  --clr-light-grey:hsla(231, 6%, 58%, 1);
+  --clr-white:hsla(0, 0%, 100%, 1);
+  --clr-blank:hsla(0, 0%, 65%, 1);
+
+  --clr-neutral:hsla(247, 13%, 25%, 0.22);
+   /* font-sizes */
+   --fs-14:0.875;   
+   --fs-16: 1rem;
+   --fs-18: 1.125rem;
+   --fs-24:1.5rem;
+   --fs-30:1.875rem;
+   --fs-42:2.625rem;
+    /* font-families */
+    --ff-raleway:'Raleway', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-source: 'Source Sans Pro', sans-serif;
+}
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+  font-family: var(--ff-raleway);
+  position: relative;
+  font-size:16px;
+  font-weight: 400;
+  color: var(--clr-black);
+  line-height:18px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* currency selector style**/
+.custom-options{
+  display: none;
+}
+.select-wrapper span{   
+  font-weight: 500;
+  line-height: 1.8rem;
+  }
+.select__trigger .arrow>span:last-child{
+  margin-left:10px ;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
+.custom-options{
+  position: absolute;
+  width:7.917vw;
+  min-width: fit-content;
+  max-width: 7.917vw;
+  top:4.063rem;
+  right: 4.875rem;
+  padding: 1.25rem 0;
+  z-index:15;
+  box-shadow: 0 0 10px rgb(61, 52, 52);
+}
+.custom-options .custom-option{
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+
+  width: 100%;
+}
+.h-30{
+  height: 30vw;
+}
+.custom-options>.custom-option:not(:last-child){
+  margin-bottom: 0.313rem;
+
+}
+.custom-options .custom-option:hover{
+  background-color:   hsla(0, 0%, 93%, 1)
+  ;
+ 
+  border: 1px solid   hsla(0, 0%, 93%, 1);
+  
+}
+
+.custom-options .custom-option>span:last-child{
+  margin-left: 0.4rem;
+} /** end of currency selector style*/
+
+.show{
+  display: block;
+}
+.activeButton {
+  background-color: var(--clr-black)!important;
+  color: var(--clr-white) !important;
+}
+.activeSwatchButton {
+  /* box-shadow: 0 0 4px var(--clr-black) !important; */
+  border: 1px solid var(--clr-primary) !important;
+}
+.p-2{
+ padding: 2px;
+}
+/**utility classes*/
+
+.flex-end{
+  justify-content: flex-end;
+}
+.flex-start{
+  justify-content: flex-start;
+}
+.flex{
+  display: flex;
+}
+.flex-column{
+  flex-direction: column;
+}
+.items-center{
+  align-items: center;
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+.flex-space-around{
+  justify-content: space-around;
+}
+.flex-center{
+  justify-content: center;
+}
+.text-center{
+  text-align: center;
+}
+.grid{
+  display: grid;
+}
+.flex-column{
+  flex-direction: column;
+}
+.flex-column-reverse{
+  flex-direction: column-reverse;
+}
+.border-1{
+  border: 1px solid var(--clr-black);
+}
+.aboslute{
+  position: absolute;
+}
+.font-500{
+  font-weight: 500;
+}
+.font-600{
+  font-weight: 600;
+}
+.font-700{
+  font-weight: 700;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.text-dark{
+  color: var(--clr-black);
+}
+.bg-dark{
+  background-color: black;
+}
+.bg-light{
+  background-color: var(--clr-white);
+}
+.bg-primary{
+  background-color: var(--clr-primary);
+}
+.text-center{
+  text-align: center;
+}
+.text-light{
+  color: var(--clr-white);
+}
+.flex-start{
+  justify-content: flex-start;
+}
+.items-end{
+  align-items: flex-end;
+}
+.text-upper-case{
+  text-transform: uppercase;
+}
+.text-primary{
+ color: var(--clr-primary);
+}
+.h-100{
+  height: 100%;
+}
+.attribute {
+  font-family:var(--ff-source);
+  letter-spacing:5%;
+}
+.swatch-button{
+  width:2.222vw;
+  max-width:2.222vw;
+  min-width:2.222vw;
+  height:2.222vw;
+}
+.btn-margin{
+     margin-bottom:1.667vw;
+
+}
+
+div >.btn-swatch:not(:first-child){
+  margin-left:0.556vw;
+}
+
+/*cart info style*/
+.info{
+  margin-top:2.222vw ;
+}
+.tax ,.quantity,.total{
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+}
+.tax{
+  max-width: 12.778vw;
+  min-width: 12.778vw;
+  width:12.778vw;
+}
+.quantity ,.total{
+ margin-top: 0.556vw;
+}
+
+.total>span:last-child{
+  margin-left: 3.056vw;
+}
+.btn-order{
+  text-decoration:none;
+}
